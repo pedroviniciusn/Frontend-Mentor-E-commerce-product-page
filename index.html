@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6fd3d97d21.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles/main.css">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body>
+
+  <header>
+    <img src="/images/logo.svg" alt="logo sneakers" class="logo">
+    <nav>
+      <ul>
+        <li>
+          <a href="#">
+            Collections
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Men
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Women
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="cartAndProfile">
+      <img src="/images/icon-cart.svg" alt="cart" class="cart">
+      <img src="/images/image-avatar.png" alt="profile" class="profile">
+    </div>
+  </header>
+  <section class="container">
+    <div class="productPhotos" id="productPhotos">
+      <img src="/images/image-product-1.jpg" alt="product photo" class="productPhoto" id="productPhoto">
+      <div class="thumb" id="thumb">
+        <img src="/images/image-product-1-thumbnail.jpg" alt="pictures thumb" class="imageThumb active" id="imageId1">
+        <img src="/images/image-product-2-thumbnail.jpg" alt="pictures thumb"  class="imageThumb " id="imageId2">
+        <img src="/images/image-product-3-thumbnail.jpg" alt="pictures thumb"  class="imageThumb " id="imageId3">
+        <img src="/images/image-product-4-thumbnail.jpg" alt="pictures thumb"  class="imageThumb " id="imageId4">
+      </div>
+    </div>
+
+    <div class="modal hidden" id="modal">
+      <div class="modalContent">
+        <i class="fa-solid fa-xmark fa-xl" id="closeModalButton"></i>
+          <div class="productPhotosModal" id="productPhotosModal">
+            <div class="nextAndPrevious">
+              <button class="buttonPrevious">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <img src="/images/image-product-1.jpg" alt="product photo" class="productPhotoModal" id="productPhotoModal">
+              <button>
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+            <div class="thumbModal" id="thumbModal">
+              <img src="/images/image-product-1-thumbnail.jpg" alt="pictures thumb modal" class="imageThumbModal activeModal" id="imageModalId1">
+              <img src="/images/image-product-2-thumbnail.jpg" alt="pictures thumb modal"  class="imageThumbModal " id="imageModalId2">
+              <img src="/images/image-product-3-thumbnail.jpg" alt="pictures thumb modal"  class="imageThumbModal " id="imageModalId3">
+              <img src="/images/image-product-4-thumbnail.jpg" alt="pictures thumb nodal"  class="imageThumbModal" id="imageModalId4">
+            </div>
+          </div>
+      </div>
+    </div>
+    <main>
+      <div class="productDescription">
+        <h3>Sneaker Company</h3>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      </div>
+      <div class="priceAndDiscount">
+        <div class="discountPrice">
+          <strong>$125.00</strong>
+          <span>50%</span>
+        </div>
+        <span class="price">$250.00</span>
+      </div>
+      <div class="addToCart">
+        <div class="counter">
+          <img src="/images/icon-minus.svg" alt="icon -" class="iconMinus">
+          <span>0</span>
+          <img src="/images/icon-plus.svg" alt="icon +" class="iconPlus">
+        </div>
+        <button>
+          <i class="fa-solid fa-cart-shopping fa-sm"></i>
+          Add to cart
+        </button>
+      </div>
+    </main>
+  </section>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="/scriptjs/thumbAndModal.js"></script>
+</body>
+</html>
