@@ -151,19 +151,19 @@ header {
             margin-right: -50%;
             transform: translate(-50%, -50%);
 
-            i {
+            .iconCloseModal {
                 position: relative;
                 left: 88%;
                 margin: 1.5rem;
 
-                color: var(--Dark-grayish-blue);
+                color: var(--White);
 
                 cursor: pointer;
 
                 transition: color 0.2s;
 
                 &:hover {
-                    color: var(--White);
+                    color: var(--Orange);
                 }
             }
 
@@ -174,15 +174,24 @@ header {
                     align-items: center;
 
                     .buttonPrevious {
-                        width: 25px;
+                        width: 40px;
+                        height: 40px;
                         border: none;
                         border-radius: 20px;
                         position: absolute;
                         z-index: 2000;
+                        left: -5%;
 
-                        img {
-                            width: 100%;
+                        .iconPrevious {
+
+                            transition: color 0.2s;
+
+                            &:hover {
+                                color: var(--Orange);
+                            }
                         }
+                        
+                        
                     }
     
                     img {
@@ -190,6 +199,25 @@ header {
                         border-radius: 10px;
     
                         cursor: pointer;
+                    }
+
+                    .buttonNext {
+                        width: 40px;
+                        height: 40px;
+                        border: none;
+                        border-radius: 20px;
+                        position: absolute;
+                        z-index: 2000;
+                        left: 95%;
+
+                        .iconNext {
+
+                            transition: color 0.2s;
+
+                            &:hover {
+                                color: var(--Orange);
+                            }
+                        }
                     }
                 }
             }

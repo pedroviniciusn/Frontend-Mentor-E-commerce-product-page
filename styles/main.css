@@ -162,35 +162,55 @@ header .cartAndProfile .profile:hover {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-.container .modal .modalContent i {
+.container .modal .modalContent .iconCloseModal {
   position: relative;
   left: 88%;
   margin: 1.5rem;
-  color: var(--Dark-grayish-blue);
+  color: var(--White);
   cursor: pointer;
   transition: color 0.2s;
 }
-.container .modal .modalContent i:hover {
-  color: var(--White);
+.container .modal .modalContent .iconCloseModal:hover {
+  color: var(--Orange);
 }
 .container .modal .modalContent .productPhotosModal .nextAndPrevious {
   display: flex;
   align-items: center;
 }
 .container .modal .modalContent .productPhotosModal .nextAndPrevious .buttonPrevious {
-  width: 25px;
+  width: 40px;
+  height: 40px;
   border: none;
   border-radius: 20px;
   position: absolute;
   z-index: 2000;
+  left: -5%;
 }
-.container .modal .modalContent .productPhotosModal .nextAndPrevious .buttonPrevious img {
-  width: 100%;
+.container .modal .modalContent .productPhotosModal .nextAndPrevious .buttonPrevious .iconPrevious {
+  transition: color 0.2s;
+}
+.container .modal .modalContent .productPhotosModal .nextAndPrevious .buttonPrevious .iconPrevious:hover {
+  color: var(--Orange);
 }
 .container .modal .modalContent .productPhotosModal .nextAndPrevious img {
   width: 100%;
   border-radius: 10px;
   cursor: pointer;
+}
+.container .modal .modalContent .productPhotosModal .nextAndPrevious .buttonNext {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 2000;
+  left: 95%;
+}
+.container .modal .modalContent .productPhotosModal .nextAndPrevious .buttonNext .iconNext {
+  transition: color 0.2s;
+}
+.container .modal .modalContent .productPhotosModal .nextAndPrevious .buttonNext .iconNext:hover {
+  color: var(--Orange);
 }
 .container .modal .modalContent .thumbModal {
   width: 80%;

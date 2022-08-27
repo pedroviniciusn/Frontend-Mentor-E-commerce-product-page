@@ -13,21 +13,19 @@ const ThumbAndModal = {
         this.modal = document.querySelector('#modal')
         this.thumbModal = document.querySelector('#thumbModal')
 
-        this.productPhotosModal = document.querySelector('#productPhotosModal')
+        this.productPhotoModal = document.querySelector('#productPhotoModal')
         this.closeModalButton = document.querySelector('#closeModalButton')
+        
     },
     
     bindEvents: function() {
         const Self = this
 
+
         //Thumb
 
         Array.from(thumb.children).forEach(function(img) {
-            img.onclick = () => Self.Events.handleImageClick(img)
-            img.addEventListener('click', function() {
-                Array.from(thumb.children).forEach(img => img.classList.remove('active'))
-                this.classList.add('active')
-            })
+            img.onclick = () => Self.Events.handleImageClick(img, thumb);
         })
 
         //Modal
@@ -35,12 +33,8 @@ const ThumbAndModal = {
         productPhotos.children[0].onclick = () => Self.Events.handleOpenModal()
         closeModalButton.onclick = () => Self.Events.handleCloseModal()
 
-        Array.from(thumbModal.children).forEach( function(img) {
-            img.onclick = () => Self.Events.handleImageModalClick(img)
-            img.addEventListener('click', function() {
-                Array.from(thumbModal.children).forEach(img => img.classList.remove('activeModal'))
-                this.classList.add('activeModal')
-            })
+        Array.from(thumbModal.children).forEach(function(img) {
+            img.onclick = () => Self.Events.handleImageModalClick(img, thumbModal);
         })
         
     },
@@ -48,50 +42,59 @@ const ThumbAndModal = {
    
 
     Events: {
-        handleImageClick: function(img) {
+        handleImageClick: function(img, thumb) {
 
             let imgProduct = productPhotos.children[0]
             
             switch (img.id) {
                 case 'imageId1': 
                 imgProduct.src = `/images/image-product-1.jpg`
+            
                 break;
 
                 case 'imageId2': 
                 imgProduct.src = `/images/image-product-2.jpg`
+             
                 break;
 
                 case 'imageId3': 
                 imgProduct.src = `/images/image-product-3.jpg`
+               
                 break;
 
                 case 'imageId4': 
                 imgProduct.src = `/images/image-product-4.jpg`
+                
                 break;
             }
+            
+            ThumbAndModal.Events.changeClassThumb(img, thumb)
               
         },
 
-        handleImageModalClick: function(img) {
-            let imgProductModal = productPhotosModal.children[0]
+        handleImageModalClick: function(img, thumbModal) {
+
+            let photoProductModal = productPhotoModal
             
             switch (img.id) {
                 case 'imageModalId1': 
-                imgProductModal.src = `/images/image-product-1.jpg`
+                photoProductModal.src = `/images/image-product-1.jpg`
                 break;
 
                 case 'imageModalId2': 
-                imgProductModal.src = `/images/image-product-2.jpg`
+                photoProductModal.src = `/images/image-product-2.jpg`
                 break;
 
                 case 'imageModalId3': 
-                imgProductModal.src = `/images/image-product-3.jpg`
+                photoProductModal.src = `/images/image-product-3.jpg`
                 break;
 
                 case 'imageModalId4': 
-                imgProductModal.src = `/images/image-product-4.jpg`
+                photoProductModal.src = `/images/image-product-4.jpg`
                 break;
             }
+
+            ThumbAndModal.Events.changeClassThumbModal(img, thumbModal)
         },
 
         handleOpenModal: function() {
@@ -100,6 +103,16 @@ const ThumbAndModal = {
 
         handleCloseModal: function() {
             modal.classList.add('hidden')
+        },
+
+        changeClassThumb: function(img, thumb) {
+            Array.from(thumb.children).forEach(img => img.classList.remove('active'))
+                img.classList.add('active')
+        },
+
+        changeClassThumbModal: function(img,thumbModal) {
+            Array.from(thumbModal.children).forEach(img => img.classList.remove('activeModal'))
+                img.classList.add('activeModal')
         },
     }
 }
