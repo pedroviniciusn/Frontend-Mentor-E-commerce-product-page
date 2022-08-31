@@ -1,4 +1,5 @@
 const ThumbAndModal = {
+    
     init: function() {
 
         this.cacheSelectors()
@@ -16,6 +17,8 @@ const ThumbAndModal = {
         this.productPhotoModal = document.querySelector('#productPhotoModal')
         this.closeModalButton = document.querySelector('#closeModalButton')
         
+        this.buttonNext = document.querySelector('#buttonNext')
+        this.buttonPrevious = document.querySelector('#buttonPrevious')
     },
     
     bindEvents: function() {
@@ -33,8 +36,16 @@ const ThumbAndModal = {
         productPhotos.children[0].onclick = () => Self.Events.handleOpenModal()
         closeModalButton.onclick = () => Self.Events.handleCloseModal()
 
+        
+        
         Array.from(thumbModal.children).forEach(function(img) {
-            img.onclick = () => Self.Events.handleImageModalClick(img, thumbModal);
+            
+            img.onclick = () => Self.Events.handleImageModalClick(img, thumbModal, i);
+
+            window.i = 0
+            
+            buttonNext.onclick = () => Self.Events.handleButtonNextClick(thumbModal, i)
+            buttonPrevious.onclick = () => Self.Events.handleButtonPreviousClick(thumbModal, i)
         })
         
     },
@@ -79,18 +90,22 @@ const ThumbAndModal = {
             switch (img.id) {
                 case 'imageModalId1': 
                 photoProductModal.src = `/images/image-product-1.jpg`
+                window.i = 0
                 break;
 
                 case 'imageModalId2': 
                 photoProductModal.src = `/images/image-product-2.jpg`
+                window.i = 1
                 break;
 
                 case 'imageModalId3': 
                 photoProductModal.src = `/images/image-product-3.jpg`
+                window.i = 2
                 break;
 
                 case 'imageModalId4': 
                 photoProductModal.src = `/images/image-product-4.jpg`
+                window.i = 3
                 break;
             }
 
@@ -110,12 +125,44 @@ const ThumbAndModal = {
                 img.classList.add('active')
         },
 
-        changeClassThumbModal: function(img,thumbModal) {
+        changeClassThumbModal: function(img, thumbModal) {
             Array.from(thumbModal.children).forEach(img => img.classList.remove('activeModal'))
                 img.classList.add('activeModal')
         },
+
+        handleButtonNextClick: function(thumbModal) {
+               
+            ThumbAndModal.Events.handleSetImagem(thumbModal, i)
+            
+            if(i <= thumbModal.children.length) {
+                i++ 
+                if (i >= thumbModal.children.length) {
+                    i--
+                } else {
+                    ThumbAndModal.Events.handleSetImagem(thumbModal, i)
+
+                }
+            }  
+        },
+
+        handleButtonPreviousClick: function(thumbModal) {
+            if(i <= thumbModal.children.length) {
+                i--
+                if (i < 0) {
+                    i++
+                } else {
+                    ThumbAndModal.Events.handleSetImagem(thumbModal, i)
+                }
+            }       
+        },
+
+        handleSetImagem: function(thumbModal, i) {
+            thumbModal.children[i].click()
+            
+        },
+
+    
     }
 }
 
 ThumbAndModal.init()
- 
