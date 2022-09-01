@@ -94,7 +94,7 @@ header .cartAndProfile {
   justify-content: space-between;
   grid-area: 1/5/2/5;
 }
-header .cartAndProfile .cart .cartIcon {
+header .cartAndProfile .cart .iconCart {
   width: 28px;
   cursor: pointer;
 }
