@@ -160,7 +160,6 @@ const ThumbAndModal = {
             thumbModal.children[i].click()
             
         },
-
     
     }
 }

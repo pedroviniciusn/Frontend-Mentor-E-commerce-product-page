@@ -65,8 +65,82 @@ header {
         grid-area: 1 / 5 / 2 / 5;
 
         .cart {
-            width: 25px;
-            cursor: pointer;
+
+            .cartIcon {
+                width: 28px;
+                cursor: pointer;
+            }
+
+            
+
+            .cartContent {
+                width: 320px;
+                height: 200px;
+                position: absolute;
+                display: grid;
+                z-index: 2000;
+                background-color: var(--White);
+                left: 76%;
+                top: 15%;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0px 8px 10px 1px var(--Grayish-blue);
+
+
+                h2 {
+                    padding: 1rem;
+                    font-size: 1rem;
+                    border-bottom: 1px solid var(--Grayish-blue);
+                }
+
+                .productSummary {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem;
+
+                    .productCartImage {
+                        width: 50px;
+                        border-radius: 5px;
+                    }
+
+                    .title {
+                        font-size: 0.9rem;
+                        color: var(--Dark-grayish-blue);
+
+                        strong {
+                            color: var(--Black);
+                        }
+                    }
+
+                    .deleteIcon {
+                        width: 15px;
+                        cursor: pointer;
+                    }
+                }
+                
+                .buttonCheckout {
+                    width: 88%;
+                    height: 40px;
+                    margin: 0 auto 10px;
+
+                    background-color: var(--Orange);
+                    color: var(--White);
+                    
+                    font-size: .8rem;
+                    font-weight: bold;
+
+                    border: none;
+                    border-radius: 5px;
+
+                    transition: filter 0.2s;
+
+                    &:hover {
+                        filter: opacity(0.7);
+                    }   
+                }
+
+            }
         }
 
         .profile {
@@ -81,6 +155,10 @@ header {
             }
         }
     }
+}
+
+.hiddenCart {
+    display: none;
 }
 
 .container {

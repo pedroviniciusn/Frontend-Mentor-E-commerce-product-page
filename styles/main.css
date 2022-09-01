@@ -94,9 +94,63 @@ header .cartAndProfile {
   justify-content: space-between;
   grid-area: 1/5/2/5;
 }
-header .cartAndProfile .cart {
-  width: 25px;
+header .cartAndProfile .cart .cartIcon {
+  width: 28px;
   cursor: pointer;
+}
+header .cartAndProfile .cart .cartContent {
+  width: 320px;
+  height: 200px;
+  position: absolute;
+  display: grid;
+  z-index: 2000;
+  background-color: var(--White);
+  left: 76%;
+  top: 15%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 10px 1px var(--Grayish-blue);
+}
+header .cartAndProfile .cart .cartContent h2 {
+  padding: 1rem;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--Grayish-blue);
+}
+header .cartAndProfile .cart .cartContent .productSummary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header .cartAndProfile .cart .cartContent .productSummary .productCartImage {
+  width: 50px;
+  border-radius: 5px;
+}
+header .cartAndProfile .cart .cartContent .productSummary .title {
+  font-size: 0.9rem;
+  color: var(--Dark-grayish-blue);
+}
+header .cartAndProfile .cart .cartContent .productSummary .title strong {
+  color: var(--Black);
+}
+header .cartAndProfile .cart .cartContent .productSummary .deleteIcon {
+  width: 15px;
+  cursor: pointer;
+}
+header .cartAndProfile .cart .cartContent .buttonCheckout {
+  width: 88%;
+  height: 40px;
+  margin: 0 auto 10px;
+  background-color: var(--Orange);
+  color: var(--White);
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: filter 0.2s;
+}
+header .cartAndProfile .cart .cartContent .buttonCheckout:hover {
+  filter: opacity(0.7);
 }
 header .cartAndProfile .profile {
   width: 50px;
@@ -106,6 +160,10 @@ header .cartAndProfile .profile {
 header .cartAndProfile .profile:hover {
   border: 2px solid var(--Orange);
   border-radius: 100%;
+}
+
+.hiddenCart {
+  display: none;
 }
 
 .container {
