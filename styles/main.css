@@ -116,6 +116,11 @@ header .cartAndProfile .cart .cartContent h2 {
   font-size: 1rem;
   border-bottom: 1px solid var(--Grayish-blue);
 }
+header .cartAndProfile .cart .cartContent .messageCart {
+  padding: 4rem;
+  text-align: center;
+  color: var(--Dark-grayish-blue);
+}
 header .cartAndProfile .cart .cartContent .productSummary {
   display: flex;
   justify-content: space-between;

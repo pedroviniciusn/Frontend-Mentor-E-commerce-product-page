@@ -93,6 +93,13 @@ header {
                     border-bottom: 1px solid var(--Grayish-blue);
                 }
 
+                .messageCart {
+                    padding: 4rem;
+                    text-align: center;
+
+                    color: var(--Dark-grayish-blue);
+                }
+
                 .productSummary {
                     display: flex;
                     justify-content: space-between;

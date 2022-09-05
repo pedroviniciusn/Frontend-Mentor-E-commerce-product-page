@@ -131,9 +131,6 @@ const ThumbAndModal = {
         },
 
         handleButtonNextClick: function(thumbModal) {
-               
-            ThumbAndModal.Events.handleSetImagem(thumbModal, i)
-            
             if(i <= thumbModal.children.length) {
                 i++ 
                 if (i >= thumbModal.children.length) {

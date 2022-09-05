@@ -51,16 +51,6 @@
       <div class="cart">
         <img src="/images/icon-cart.svg" alt="cart" class="iconCart" id="iconCart">
         <div class="hiddenCart" id="cartContent">
-          <h2>Cart</h2>
-          <div class="productSummary">
-            <img src="/images/image-product-1-thumbnail.jpg" alt="item Cart" class="productCartImage">
-            <div class="title">
-              <p>Fall Limited Edition Sneakers</p>
-              <span>$125.00 x 3 <strong>$375.00</strong></span>
-            </div>
-            <img src="/images/icon-delete.svg" alt="delete item" class="deleteIcon">
-          </div>
-          <button class="buttonCheckout">Checkout</button>
         </div>
       </div>
       <img src="/images/image-avatar.png" alt="profile" class="profile">
@@ -115,11 +105,11 @@
       </div>
       <div class="addToCart">
         <div class="counter">
-          <img src="/images/icon-minus.svg" alt="icon -" class="iconMinus">
-          <span>0</span>
-          <img src="/images/icon-plus.svg" alt="icon +" class="iconPlus">
+          <img src="/images/icon-minus.svg" alt="icon -" class="iconMinus" id="iconMinus">
+          <span id="itemQuantity">0</span>
+          <img src="/images/icon-plus.svg" alt="icon +" class="iconPlus" id="iconPlus">
         </div>
-        <button>
+        <button id="buttonAddToCart">
           <i class="fa-solid fa-cart-shopping fa-sm"></i>
           Add to cart
         </button>
