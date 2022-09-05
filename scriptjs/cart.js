@@ -104,7 +104,7 @@ const Cart = {
                 itemQuantity.innerText = n
             } else {
                 n--
-                if (i < 0) {
+                if (n < 0) {
                     n++
                 } else {
                     itemQuantity.innerText = n
