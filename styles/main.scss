@@ -66,8 +66,24 @@ header {
 
         .cart {
 
+            .quantityInCart {
+                width: 20px;
+                top: 3%;
+                position: absolute;
+                z-index: 20000;
+                margin: 1rem;
+
+                border-radius: 30px;
+                color: var(--White);
+                background: var(--Orange);
+
+                text-align: center;
+                font-size: 0.8rem;
+            }
+            }
+
             .iconCart {
-                width: 28px;
+                width: 30px;
                 cursor: pointer;
             }
 
@@ -161,7 +177,6 @@ header {
                 border-radius: 100%;
             }
         }
-    }
 }
 
 .hiddenCart {
@@ -486,4 +501,20 @@ header {
             }
         }
     }
+}
+
+.attribution {
+    padding: 2rem;
+    text-align: center;
+    color: var(--Grayish-blue);
+
+    a {
+        transition: color 0.2s;
+    }
+    
+    a:hover {
+        color: var(--Orange);
+    }
+
+    
 }

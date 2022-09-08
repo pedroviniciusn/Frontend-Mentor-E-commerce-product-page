@@ -22,6 +22,7 @@ const Cart = {
         
         this.iconMinus = document.querySelector('#iconMinus')
         this.buttonAddToCart = document.querySelector('#buttonAddToCart')
+        this.quantityInCart = document.querySelector('.quantityInCart')
         this.iconPlus = document.querySelector('#iconPlus')
         this.buttonDelete = document.getElementById('deleteIcon')
         this.itemQuantity = document.querySelector('#itemQuantity').innerText
@@ -54,12 +55,15 @@ const Cart = {
     checkCart: function() {
 
         if(Cart.cartContent === null || Cart.cartContent.length === 0) {
+            this.quantityInCart.innerText = ''
+
             this.cart.innerHTML = `
             <h2>Cart</h2>
             <span class="messageCart">Your cart is empty.</span>
             `
             
         } else {
+            this.quantityInCart.innerText = Cart.cartContent.length - 1
             this.calculateValue()
         }
 
