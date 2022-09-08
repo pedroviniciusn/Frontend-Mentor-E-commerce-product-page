@@ -81,7 +81,7 @@ header nav ul li {
 header nav ul li a {
   color: var(--Dark-grayish-blue);
   padding-bottom: 2.3rem;
-  transition: color, border-bottom 0.2s;
+  transition: color 0.2s;
 }
 header nav ul li a:hover {
   color: var(--Black);
